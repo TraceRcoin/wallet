@@ -3,3 +3,7 @@
 installer/litecoin-extract/
 installer/_test-*/
 *.log
+.secrets/
+credentials.json
+secrets.local.json
+.env
