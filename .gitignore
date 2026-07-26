@@ -1,0 +1,5 @@
+# build/scratch artifacts — never commit binaries (ship as GitHub release assets)
+*.exe
+installer/litecoin-extract/
+installer/_test-*/
+*.log

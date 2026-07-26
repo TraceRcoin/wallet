@@ -1,0 +1,30 @@
+tracercoin-0.21.5.5-win64-setup-BRANDTEST.exe
+================================================
+
+WHAT THIS IS
+  A real, working Windows installer (NSIS) built from tracercoin-setup.nsi.
+  Use it to test the INSTALLER experience on another device:
+    - Tracercoin (TFX) branding: window icon, wizard side-banner, header logo
+    - Wizard flow: Welcome -> Directory -> Start-Menu -> Install -> Finish
+    - Installs to C:\Program Files\Tracercoin
+    - Start-menu shortcuts (main + testnet + uninstall)
+    - "tracercoin:" URI protocol handler registered
+    - Clean uninstall
+
+IMPORTANT CAVEAT (read before judging the wallet)
+  The five wallet executables inside are PLACEHOLDERS -- they are the stock
+  Litecoin 0.21.5.5 binaries renamed to tracercoin-qt.exe / tracercoind.exe /
+  etc. They exist ONLY so the installer had something to package for this build.
+  If you launch the installed wallet it will behave like Litecoin (wrong network),
+  NOT the Tracercoin chain.
+
+  This is because the real Win64 Tracercoin binaries have not been cross-compiled
+  yet (they build on the Linux droplet). Once those exist, the SAME installer
+  script produces the real product -- just point makensis at the real release
+  folder:
+      makensis /DRELEASE=<folder with real tracercoin-*.exe> tracercoin-setup.nsi
+
+SO: test the setup/branding/flow freely. Do not use the installed wallet for
+real TFX yet.
+
+Built 2026-07-26. Branding art: brand\ (from make-brand-art.py). Script: ../tracercoin-setup.nsi
