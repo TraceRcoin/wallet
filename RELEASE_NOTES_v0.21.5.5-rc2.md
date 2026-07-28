@@ -48,3 +48,12 @@ Compare the output against the matching line in `SHA256SUMS.txt`.
 
 ---
 *Pre-release. Superseded by later builds as the chain approaches mainnet launch.*
+
+## Connect to the live network
+Mainnet has no populated seed discovery yet, so add the launch node to `tracercoin.conf` and restart:
+
+```
+addnode=159.65.188.80:9555
+```
+
+Or run `addnode 159.65.188.80 add` in **Window > Console**. Without a peer the wallet stays at 0 connections. Full node build + peer prerequisites: `github.com/Tracerfx123/blockchain` (README + `doc/build-prerequisites.md`).
